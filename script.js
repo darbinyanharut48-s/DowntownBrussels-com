@@ -23,7 +23,6 @@ const RESERVATION_CONFIG = window.RESERVATION_CONFIG || {
   requestTimeoutMs: 12000
 };
 
-const RESERVATION_SUCCESS_MESSAGE = 'Р’Р°С€Р° Р·Р°СЏРІРєР° РїСЂРёРЅСЏС‚Р°. РњС‹ СЃРІСЏР¶РµРјСЃСЏ СЃ РІР°РјРё РґР»СЏ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ.';
 const RESERVATION_UI_TEXT = {
   required: 'Please fill in all required fields.',
   email: 'Please enter a valid email address.',
@@ -287,7 +286,7 @@ const translations = {
     form_select_opt_tasting: 'Dégustation de Bières', form_select_opt_private: 'Événement Privé',
     form_date: 'Date', form_time: 'Heure', form_guests: 'Convives', form_notes: 'Demandes Spéciales',
     form_submit: 'Confirmer la Réservation', form_submit_modal: 'Réserver', form_sending: 'Envoi...',
-    form_success: '🎉 Réservation confirmée! À bientôt chez DownTown!',
+    form_success: '\uD83C\uDF89 R\u00E9servation confirm\u00E9e! \u00C0 bient\u00F4t chez DownTown!',
     live_tag: 'Sur les Écrans', live_title: 'Matchs en Direct',
     mdesc_tag: 'Nos Boissons', mdesc_title: 'Un Monde de Saveurs',
     mdesc_p1: 'Découvrez une large sélection de boissons conçues pour impressionner. Cocktails parfaitement équilibrés aux meilleures bières belges pression.',
@@ -438,7 +437,7 @@ const translations = {
     form_select_opt_tasting: 'Bierproeverij', form_select_opt_private: 'Privé-evenement',
     form_date: 'Datum', form_time: 'Tijd', form_guests: 'Gasten', form_notes: 'Speciale Verzoeken',
     form_submit: 'Bevestig Reservering', form_submit_modal: 'Reserveer', form_sending: 'Verzenden...',
-    form_success: '🎉 Reservering bevestigd! Tot snel bij DownTown!',
+    form_success: '\uD83C\uDF89 Reservering bevestigd! Tot snel bij DownTown!',
     live_tag: 'Op de Schermen', live_title: 'Live Wedstrijden',
     mdesc_tag: 'Onze Drankjes', mdesc_title: 'Een Wereld van Smaak',
     mdesc_p1: 'Ontdek een brede selectie dranken die indruk maken. Van perfect gebalanceerde cocktails tot de beste Belgische bieren van de tap.',
@@ -1657,7 +1656,8 @@ if (resForm) {
       setReservationCooldown();
       resForm.reset();
       setReservationMinDateTime(document.getElementById('res-when'), { setSuggestedValue: true });
-      showReservationFeedback(RESERVATION_SUCCESS_MESSAGE, 'success');
+      const successMessage = translations[currentLang]?.form_success || translations.en.form_success;
+      showReservationFeedback(successMessage, 'success');
 
       window.setTimeout(() => {
         hideReservationFeedback();
