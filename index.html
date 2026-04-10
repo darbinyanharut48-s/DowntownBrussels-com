@@ -574,8 +574,8 @@
                     €</span></li>
                 <li><span>Jack Daniels</span> <span class="item-meta">(90cl)</span> <span class="price">9.00
                     €</span></li>
-                <li><span>Jack Daniels Honey</span> <span class="item-meta">(100cl)</span> <span
-                    class="price">10.00 €</span></li>
+                <li><span>Jack Daniels Honey</span> <span class="item-meta">(100cl)</span> <span class="price">10.00
+                    €</span></li>
                 <li><span>William Lawson's</span> <span class="item-meta">(80cl)</span> <span class="price">8.00
                     €</span></li>
                 <li><span>Red Label</span> <span class="item-meta">(90cl)</span> <span class="price">9.00
@@ -716,57 +716,81 @@
 
         <!-- Bottom Row: Wines + Sparkling + Champagnes + Hot Drinks -->
         <div class="wine-row-v4">
-          <div class="menu-column">
-            <h3 class="menu-outer-title">Sparkling Wines</h3>
-            <div class="menu-v4-card wine-v4-card">
-              <ul class="menu-v4-list">
-                <li><span>Red Wine</span> <span class="item-meta">(25cl)</span> <span class="price">6.00 €</span>
-                </li>
-                <li><span>White Wine</span> <span class="item-meta">(25cl)</span> <span class="price">6.00
-                    €</span></li>
-                <li><span>Rose Wine</span> <span class="item-meta">(25cl)</span> <span class="price">6.00
-                    €</span></li>
-              </ul>
+          <div class="menu-column menu-inline-accordion menu-inline-accordion--wine">
+            <button class="menu-accordion-trigger menu-accordion-trigger--inline" type="button" aria-expanded="false"
+              aria-controls="wine-sparkling-panel">
+              <span class="menu-outer-title menu-outer-title--accordion">Sparkling Wines</span>
+              <span class="menu-accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="menu-inline-accordion-panel" id="wine-sparkling-panel" hidden>
+              <div class="menu-v4-card wine-v4-card">
+                <ul class="menu-v4-list">
+                  <li><span>Red Wine</span> <span class="item-meta">(25cl)</span> <span class="price">6.00 €</span>
+                  </li>
+                  <li><span>White Wine</span> <span class="item-meta">(25cl)</span> <span class="price">6.00
+                      €</span></li>
+                  <li><span>Rose Wine</span> <span class="item-meta">(25cl)</span> <span class="price">6.00
+                      €</span></li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="menu-column">
-            <h3 class="menu-outer-title">Wines</h3>
-            <div class="menu-v4-card wine-v4-card">
-              <ul class="menu-v4-list">
-                <li><span>Moscato</span> <span class="item-meta">(25cl)</span> <span class="price">6.00 €</span>
-                </li>
-                <li><span>Cava</span> <span class="item-meta">(30cl)</span> <span class="price">7.00 €</span>
-                </li>
-                <li><span>Royal de Jarras Blanc</span> <span class="item-meta">(30cl)</span> <span
-                    class="price">7.00 €</span></li>
-                <li><span>Royal de Jarras Rose</span> <span class="item-meta">(30cl)</span> <span
-                    class="price">7.00 €</span></li>
-              </ul>
+          <div class="menu-column menu-inline-accordion menu-inline-accordion--wine">
+            <button class="menu-accordion-trigger menu-accordion-trigger--inline menu-accordion-trigger--wine-tight" type="button" aria-expanded="false"
+              aria-controls="wine-wines-panel">
+              <span class="menu-outer-title menu-outer-title--accordion">Wines</span>
+              <span class="menu-accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="menu-inline-accordion-panel" id="wine-wines-panel" hidden>
+              <div class="menu-v4-card wine-v4-card">
+                <ul class="menu-v4-list">
+                  <li><span>Moscato</span> <span class="item-meta">(25cl)</span> <span class="price">6.00 €</span>
+                  </li>
+                  <li><span>Cava</span> <span class="item-meta">(30cl)</span> <span class="price">7.00 €</span>
+                  </li>
+                  <li><span>Royal de Jarras Blanc</span> <span class="item-meta">(30cl)</span> <span
+                      class="price">7.00 €</span></li>
+                  <li><span>Royal de Jarras Rose</span> <span class="item-meta">(30cl)</span> <span
+                      class="price">7.00 €</span></li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="menu-column">
-            <h3 class="menu-outer-title">Champagnes</h3>
-            <div class="menu-v4-card wine-v4-card">
-              <ul class="menu-v4-list">
-                <li><span>Heidsieck Monopole Silver</span> <span class="price">70.00 €</span></li>
-                <li><span>Pommery</span> <span class="price">100.00 €</span></li>
-              </ul>
+          <div class="menu-column menu-inline-accordion menu-inline-accordion--wine">
+            <button class="menu-accordion-trigger menu-accordion-trigger--inline menu-accordion-trigger--wine-tight" type="button" aria-expanded="false"
+              aria-controls="wine-champagnes-panel">
+              <span class="menu-outer-title menu-outer-title--accordion">Champagnes</span>
+              <span class="menu-accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="menu-inline-accordion-panel" id="wine-champagnes-panel" hidden>
+              <div class="menu-v4-card wine-v4-card">
+                <ul class="menu-v4-list">
+                  <li><span>Heidsieck Monopole Silver</span> <span class="price">70.00 €</span></li>
+                  <li><span>Pommery</span> <span class="price">100.00 €</span></li>
+                </ul>
+              </div>
             </div>
           </div>
 
-          <div class="menu-column">
-            <h3 class="menu-outer-title">Hot Drinks</h3>
-            <div class="menu-v4-card">
-              <ul class="menu-v4-list">
-                <li><span>Tea</span> <span class="item-meta">(black/green, mint, lemon)</span> <span class="price">3.50
-                    €</span></li>
-                <li><span>Coffee / Espresso</span> <span class="price">3.00 €</span></li>
-                <li><span>Cappuccino</span> <span class="price">4.00 €</span></li>
-                <li><span>Latte / Latte Frappe</span> <span class="price">4.50 €</span></li>
-                <li><span>Italian / Irish Coffee</span> <span class="price">8.00 €</span></li>
-              </ul>
+          <div class="menu-column menu-inline-accordion menu-inline-accordion--wine">
+            <button class="menu-accordion-trigger menu-accordion-trigger--inline menu-accordion-trigger--wine-tight" type="button" aria-expanded="false"
+              aria-controls="wine-hot-drinks-panel">
+              <span class="menu-outer-title menu-outer-title--accordion">Hot Drinks</span>
+              <span class="menu-accordion-icon" aria-hidden="true"></span>
+            </button>
+            <div class="menu-inline-accordion-panel" id="wine-hot-drinks-panel" hidden>
+              <div class="menu-v4-card">
+                <ul class="menu-v4-list">
+                  <li><span>Tea</span> <span class="item-meta">(black/green, mint, lemon)</span> <span class="price">3.50
+                      €</span></li>
+                  <li><span>Coffee / Espresso</span> <span class="price">3.00 €</span></li>
+                  <li><span>Cappuccino</span> <span class="price">4.00 €</span></li>
+                  <li><span>Latte / Latte Frappe</span> <span class="price">4.50 €</span></li>
+                  <li><span>Italian / Irish Coffee</span> <span class="price">8.00 €</span></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -1002,8 +1026,7 @@
           <div class="form-group">
             <label for="res-name" data-i18n="form_name">Full Name</label>
             <input type="text" id="res-name" name="name" autocomplete="name"
-              data-i18n-placeholder="form_name_placeholder" placeholder="Your name"
-              required />
+              data-i18n-placeholder="form_name_placeholder" placeholder="Your name" required />
           </div>
 
           <div class="form-group">
@@ -1015,15 +1038,16 @@
           <div class="form-group">
             <label for="res-phone" data-i18n="form_phone">Phone</label>
             <input type="tel" id="res-phone" name="phone" autocomplete="tel"
-              data-i18n-placeholder="form_phone_placeholder"
-              placeholder="+32 ........" required />
+              data-i18n-placeholder="form_phone_placeholder" placeholder="+32 ........" required />
           </div>
 
           <div class="form-group">
             <label for="res-when" data-i18n="form_when">Date / Time</label>
             <div class="reservation-datetime-field">
-              <button type="button" class="reservation-datetime-trigger" id="res-when-trigger" aria-label="Choose date and time">
-                <span class="reservation-datetime-value reservation-datetime-value--placeholder" id="res-when-display">Select date and time</span>
+              <button type="button" class="reservation-datetime-trigger" id="res-when-trigger"
+                aria-label="Choose date and time">
+                <span class="reservation-datetime-value reservation-datetime-value--placeholder"
+                  id="res-when-display">Select date and time</span>
                 <span class="reservation-datetime-icon" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1042,10 +1066,10 @@
           <div class="form-group">
             <label for="res-occasion" data-i18n="form_select">Reservation Type</label>
             <select id="res-occasion" name="reservation_type" required>
-              <option value="Dinner Reservation" data-reservation-kind="table" data-i18n="form_select_opt_dinner">Dinner Reservation</option>
-              <option value="Sports Night" data-reservation-kind="event" data-i18n="form_select_opt_sports">Sports Night</option>
-              <option value="Beer Tasting" data-reservation-kind="event" data-i18n="form_select_opt_tasting">Beer Tasting</option>
-              <option value="Private Event" data-reservation-kind="event" data-i18n="form_select_opt_private">Private Event</option>
+              <option value="Dinner Reservation" data-reservation-kind="table" data-i18n="form_select_opt_dinner">
+                Reserve a Table</option>
+              <option value="Private Event" data-reservation-kind="event" data-i18n="form_select_opt_private">Private
+                Event</option>
             </select>
           </div>
 
@@ -1186,9 +1210,9 @@
                 <span data-i18n="footer_hours">Monday to Sunday</span>
               </li>
               <li class="hours-time-row">
-                <span class="hours-badge">10:00</span>
+                <span class="hours-badge">12:00</span>
                 <span class="hours-dash">—</span>
-                <span class="hours-badge">02:00</span>
+                <span class="hours-badge">01:00</span>
               </li>
             </ul>
             <!-- Reserve CTA inside footer -->
@@ -1221,6 +1245,3 @@
 </body>
 
 </html>
-
-
-

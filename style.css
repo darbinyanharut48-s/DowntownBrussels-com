@@ -274,8 +274,11 @@ body.modal-open {
 .reservation-modal__dialog {
   position: relative;
   width: min(1120px, 100%);
-  max-height: none;
-  overflow: visible;
+  max-height: min(94dvh, 960px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #8f6a2b rgba(8, 10, 18, 0.86);
   padding: 0 40px 30px;
   border-radius: 28px;
   border: 1px solid rgba(201, 168, 76, 0.28);
@@ -291,6 +294,24 @@ body.modal-open {
   backdrop-filter: blur(24px) saturate(135%);
   -webkit-backdrop-filter: blur(24px) saturate(135%);
   animation: reservationModalFade 0.45s ease;
+}
+
+.reservation-modal__dialog::-webkit-scrollbar {
+  width: 10px;
+}
+
+.reservation-modal__dialog::-webkit-scrollbar-track {
+  background: rgba(8, 10, 18, 0.86);
+}
+
+.reservation-modal__dialog::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #a27a33 0%, #8f6a2b 100%);
+  border-radius: 999px;
+  border: 2px solid rgba(8, 10, 18, 0.86);
+}
+
+.reservation-modal__dialog::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #b28739 0%, #9b742f 100%);
 }
 
 .reservation-modal.is-open .reservation-modal__dialog {
@@ -428,6 +449,7 @@ body.modal-open {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px 22px;
+  padding-bottom: 10px;
 }
 
 .form-group--full {
@@ -611,6 +633,9 @@ body.modal-open {
   width: 100%;
   margin: 18px auto 0;
   display: block;
+  position: sticky;
+  bottom: 6px;
+  z-index: 4;
   font-size: 1rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -665,6 +690,17 @@ body.modal-open {
 @media (max-width: 768px) {
   .reservation-modal {
     padding: 18px;
+  }
+
+  /* Mobile Safari/iOS fix: native datetime picker must be opened by direct tap on input */
+  .reservation-datetime-native {
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0;
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 3;
   }
 
   .reservation-modal__dialog {
@@ -2122,6 +2158,84 @@ body.modal-open {
   flex-direction: column;
 }
 
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--inline {
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  padding: 14px 64px 14px 18px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.wine-row-v4 .menu-inline-accordion--wine .menu-outer-title--accordion {
+  min-height: 0;
+  margin: 0;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0 36px 0 8px;
+  box-sizing: border-box;
+  font-size: clamp(1.16rem, 1.9vw, 1.72rem);
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--inline:hover {
+  border-color: rgba(212, 175, 55, 0.28);
+  background: rgba(8, 14, 25, 0.35);
+}
+
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--inline[aria-expanded="true"] {
+  border-color: rgba(212, 175, 55, 0.68);
+  background: rgba(8, 14, 25, 0.72);
+  box-shadow: none;
+}
+
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--inline .menu-accordion-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  transform: translateY(-50%);
+  opacity: 0.85;
+}
+
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--inline .menu-accordion-icon::before,
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--inline .menu-accordion-icon::after {
+  width: 12px;
+}
+
+/* Tight variant for Wines / Champagnes / Hot Drinks: +/- stays close to label */
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight {
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 18px;
+}
+
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight .menu-outer-title--accordion {
+  width: auto;
+  padding: 0;
+}
+
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight .menu-accordion-icon {
+  position: static;
+  right: auto;
+  top: auto;
+  transform: none;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+}
+
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight .menu-accordion-icon::before,
+.wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight .menu-accordion-icon::after {
+  width: 10px;
+}
+
 .menu-row-top--accordion {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2834,6 +2948,27 @@ body.modal-open {
   .menu-accordion-trigger--inline .menu-accordion-icon::after {
     width: 12px;
     background: #c6a46a;
+  }
+
+  .wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight {
+    gap: 8px;
+    padding: 14px 18px;
+  }
+
+  .wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight .menu-outer-title--accordion {
+    width: auto;
+    padding: 0;
+  }
+
+  .wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight .menu-accordion-icon {
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    opacity: 0.85;
   }
 
   .menu-accordion-display {
