@@ -1347,7 +1347,7 @@ body.modal-open {
 
 /* Drawer Footer Info */
 .drawer-footer {
-  margin-top: auto;
+  /* margin-top: auto; */
   padding: 20px 28px 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -2406,12 +2406,12 @@ body.modal-open {
   column-gap: 12px;
 }
 
-.menu-v4-list li.menu-v4-list__row-compact-triplet > span:first-child {
+.menu-v4-list li.menu-v4-list__row-compact-triplet>span:first-child {
   justify-self: start;
   min-width: 0;
 }
 
-.menu-v4-list li.menu-v4-list__row-compact-triplet > .item-meta {
+.menu-v4-list li.menu-v4-list__row-compact-triplet>.item-meta {
   margin-top: 0;
   justify-self: center;
   text-align: center;
@@ -2420,7 +2420,7 @@ body.modal-open {
   font-feature-settings: "tnum" 1;
 }
 
-.menu-v4-list li.menu-v4-list__row-compact-triplet > .price {
+.menu-v4-list li.menu-v4-list__row-compact-triplet>.price {
   margin-left: 0;
   justify-self: end;
   white-space: nowrap;
@@ -2432,7 +2432,7 @@ body.modal-open {
   column-gap: 10px;
 }
 
-.wine-v4-card .menu-v4-list li.menu-v4-list__row-compact-triplet > span:first-child {
+.wine-v4-card .menu-v4-list li.menu-v4-list__row-compact-triplet>span:first-child {
   white-space: nowrap;
 }
 
@@ -2896,6 +2896,10 @@ body.modal-open {
     gap: 22px;
   }
 
+  .wine-row-v4 {
+    gap: 22px;
+  }
+
   .menu-row-top--accordion .menu-accordion-trigger,
   .menu-accordion-trigger--inline {
     position: relative;
@@ -2950,9 +2954,38 @@ body.modal-open {
     background: #c6a46a;
   }
 
+  /* Mobile: make Sparkling/Wines/Champagnes/Hot Drinks identical to other accordion buttons */
+  .wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--inline {
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 56px 16px 20px;
+    margin-bottom: 0;
+    overflow: visible;
+    isolation: auto;
+  }
+
+  .wine-row-v4 .menu-inline-accordion--wine .menu-outer-title--accordion {
+    width: auto;
+    padding: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.18em;
+    line-height: 1;
+  }
+
+  .wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--inline .menu-accordion-icon {
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    transform: translateY(-50%);
+    opacity: 0.8;
+  }
+
   .wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight {
-    gap: 8px;
-    padding: 14px 18px;
+    gap: 12px;
+    padding: 16px 56px 16px 20px;
   }
 
   .wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight .menu-outer-title--accordion {
@@ -2961,14 +2994,14 @@ body.modal-open {
   }
 
   .wine-row-v4 .menu-inline-accordion--wine .menu-accordion-trigger--wine-tight .menu-accordion-icon {
-    position: static;
-    right: auto;
-    top: auto;
-    transform: none;
-    width: 16px;
-    height: 16px;
-    flex: 0 0 16px;
-    opacity: 0.85;
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    opacity: 0.8;
   }
 
   .menu-accordion-display {
