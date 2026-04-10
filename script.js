@@ -9,7 +9,7 @@ const RESERVATION_CONFIG = window.RESERVATION_CONFIG || {
   restaurantEmail: 'downtownbrussels@gmail.com',
   email: {
     endpoint: 'https://api.web3forms.com/submit',
-    accessKey: 'fc2f38a8-808f-4483-bb3e-c94f01520fa5'
+    accessKey: 'c3f55ae8-b370-4f5b-a1f8-f4aa4dcb5e9f'
   },
   telegram: {
     botToken: '8649049980:AAEp5ef2_u4luNM4966JXD0NsS1n6JfYH5Y',
@@ -349,7 +349,7 @@ const translations = {
     nav_reserve_btn: 'RESERVATIE', nav_reserve_cta: 'RESERVATIE',
     nav_tasting: 'Proeverij',
     hero_badge: 'Brussels #1 Sports Bar',
-    hero_title: 'De Tempel van Belgische Bieren & Sportevenementen',
+    hero_title: 'De plek voor Belgische bieren & live sport',
     hero_subtitle: 'Ontdek onze exclusieve selectie Belgische trappisten- en abdijbieren, met een authentiek en verfijnd karakter. …nu ook dé plek voor alle sportliefhebbers, van voetbal tot tennis en rugby.',
     hero_btn1: 'Ontdek onze Bieren', hero_btn2: 'Reserveer een Tafel',
     stat_beers: 'Belgische Bieren', stat_screens: 'Live Schermen', stat_open: 'Dagelijks Open',
@@ -446,7 +446,7 @@ const translations = {
     di1: 'Cocktails', di2: 'Bieren', di3: 'Sterke Drank', di4: 'Wijnen',
     menuDescription: 'Geniet van een uitgebreide drankenkaart bij DownTown Brussels, met Belgische bieren van het vat, creatieve cocktails en kwaliteitsvolle sterke dranken.',
     eventsDescription: 'Op zoek naar de beste plek om live sport te kijken in Brussel? Bekijk voetbal, Champions League en grote sportevenementen bij DownTown Brussels, met meerdere schermen, geweldig geluid en een levendige sfeer.',
-    footer_tagline: 'De Tempel van Belgische Bieren & Sportevenementen in Brussel.',
+    footer_tagline: 'De plek voor Belgische bieren & live sport',
     footer_hours_title: 'Openingsuren', footer_hours: 'Maandag tot Zondag',
     footer_contact_title: 'Contact', footer_nav_title: 'Snelkoppelingen',
     footer_nav_home: 'Home', footer_nav_menu: 'Menu', footer_nav_events: 'Evenementen',
