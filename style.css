@@ -3546,7 +3546,7 @@ body.modal-open {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -4245,7 +4245,7 @@ body.modal-open {
 }
 
 .sel-card-featured .sel-card-img-wrap {
-  height: 240px;
+  height: 270px;
 }
 
 .sel-card-img {
@@ -4307,6 +4307,10 @@ body.modal-open {
 
 /* Floating emoji icon */
 .sel-card-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
   font-size: 1.6rem;
   line-height: 1;
   margin-bottom: 2px;
