@@ -158,7 +158,7 @@ const translations = {
     sel_subtitle: 'Three reasons to make DownTown your go-to Brussels destination.',
     sel1_title: 'Belgian Treasures', sel1_text: 'Trappist, Dubbels, Tripels, Lambics, Witbiers — an authentic collection for true beer lovers.', sel1_cta: 'Explore Selection',
     sel2_title: 'Supporter Zone', sel2_text: 'Watch major sports events live on big screens all year round. Enjoy an electric atmosphere with friends.', sel2_cta: 'See Live Events',
-    sel3_title: 'Rare & Craft Beers', sel3_text: 'Discover exclusive selections, barrel-aged beers, and limited brews for a unique tasting experience.', sel3_cta: 'Discover More',
+    sel3_title: 'Rare & Craft Beers', sel3_text: 'Enjoy Trappist, Dubbels, Tripels, Lambics, and Witbiers — carefully kept in barrels to preserve freshness and flavor.', sel3_cta: 'Discover More',
     loc_tag: 'Find Us', loc_title: 'Find Us', loc_subtitle: 'Visit us in the heart of Brussels.',
     loc_text: 'DownTown Brussels is ideally located just steps away from Place de la Bourse and the Grand Place. Easily accessible, our venue is the perfect destination to enjoy premium drinks, a vibrant atmosphere, and live sports.',
     loc_addr: 'Rue Henri Maus 15, 1000 Brussels (Place de la Bourse)', loc_cta: 'Open in Google Maps',
@@ -312,11 +312,13 @@ const translations = {
     sel_subtitle: 'Trois raisons de faire de DownTown votre destination incontournable à Bruxelles.',
     sel1_title: 'Les Trésors Belges', sel1_text: 'Trappistes, Dubbels, Tripels, Lambics, Witbiers — une collection authentique pour les vrais amateurs.', sel1_cta: 'Explorer la Sélection',
     sel2_title: 'Zone Supporter', sel2_text: 'Regardez les grands événements sportifs en direct toute l\'année. Profitez d\'une ambiance électrique.', sel2_cta: 'Voir les Événements',
-    sel3_title: 'Bières Rares & Craft', sel3_text: 'Découvrez des sélections exclusives, des bières vieillies en fût et des brassins limités.', sel3_cta: 'En Savoir Plus',
+    sel3_title: 'Bières Rares & Craft', sel3_text: 'Savourez des Trappistes, Dubbels, Tripels, Lambics et Witbiers — soigneusement conservées en fûts pour préserver leur fraîcheur et leurs saveurs.', sel3_cta: 'En Savoir Plus',
     loc_tag: 'Nous trouver', loc_title: 'Nous trouver', loc_subtitle: 'Rendez-nous visite au cœur de Bruxelles.',
     loc_text: 'DownTown Brussels bénéficie d’un emplacement idéal, à quelques pas de la Place de la Bourse et de la Grand-Place. Facilement accessible, notre établissement est l’endroit parfait pour profiter de boissons de qualité, d’une ambiance dynamique et de retransmissions sportives en direct.',
     loc_addr: 'Rue Henri Maus 15, 1000 Bruxelles (Place de la Bourse)', loc_cta: 'Ouvrir dans Maps',
     faq_tag: 'Questions Fréquentes', faq_title: 'FAQ',
+    gallery_tag: 'À l\'intérieur du centre-ville', gallery_title: 'Galerie',
+    gallery_subtitle: 'Plongez dans l’ambiance lumineuse de Downtown à travers des cocktails signature, des détails de bar soignés et une atmosphère nocturne où chaque tournée devient cinématographique.',
     faq_subtitle: 'Tout ce que vous pouvez vouloir savoir avant votre prochaine soirée chez DownTown.',
     faq: [
       {
@@ -466,11 +468,13 @@ const translations = {
     sel_subtitle: 'Drie redenen waarom DownTown jouw bestemming in Brussel is.',
     sel1_title: 'Belgische Schatten', sel1_text: 'Trappisten, Dubbels, Tripels, Lambieken, Witbieren — een authentieke collectie voor echte bierliefhebbers.', sel1_cta: 'Ontdek Selectie',
     sel2_title: 'Supporters Zone', sel2_text: 'Bekijk het hele jaar door grote sportevenementen live op grote schermen. Geniet van een opwindende sfeer.', sel2_cta: 'Bekijk Live Events',
-    sel3_title: 'Zeldzame & Speciaalbieren', sel3_text: 'Ontdek exclusieve selecties, op vat gerijpte bieren en gelimiteerde browsels voor een unieke smaakervaring.', sel3_cta: 'Ontdek Meer',
+    sel3_title: 'Zeldzame & Speciaalbieren', sel3_text: 'Geniet van Trappisten, Dubbels, Tripels, Lambieken en Witbieren — zorgvuldig bewaard in vaten om versheid en smaak te behouden.', sel3_cta: 'Ontdek Meer',
     loc_tag: 'Ons vinden', loc_title: 'Ons vinden', loc_subtitle: 'Bezoek ons in het hart van Brussel.',
     loc_text: 'DownTown Brussels is ideaal gelegen op slechts enkele stappen van de Beurs en de Grote Markt. Gemakkelijk bereikbaar en de perfecte plek om te genieten van kwaliteitsdranken, een levendige sfeer en live sportuitzendingen.',
     loc_addr: 'Henri Mausstraat 15, 1000 Brussel (Beursplein)', loc_cta: 'Open in Google Maps',
     faq_tag: 'Veelgestelde Vragen', faq_title: 'FAQ',
+    gallery_tag: 'In het stadscentrum', gallery_title: 'Galerij',
+    gallery_subtitle: 'Stap in de gloed van Downtown met signature cocktails, verfijnde bardetails en een nachtelijke sfeer waarin elke ronde filmisch aanvoelt.',
     faq_subtitle: 'Alles wat je vooraf wilt weten voor je volgende avond bij DownTown.',
     faq: [
       {
