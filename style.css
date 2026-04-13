@@ -2256,6 +2256,10 @@ body.modal-open {
   width: 100%;
 }
 
+.menu-row-secondary--accordion .happy-hours-v4--panel {
+  grid-column: 1 / -1;
+}
+
 .menu-accordion-trigger {
   width: 100%;
   display: flex;
@@ -2941,6 +2945,22 @@ body.modal-open {
   .menu-row-secondary--accordion {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .menu-row-secondary__softs {
+    order: 1;
+  }
+
+  .menu-row-secondary__happy {
+    order: 2;
+  }
+
+  .menu-row-secondary--accordion .happy-hours-v4--panel {
+    order: 3;
+  }
+
+  .menu-row-secondary__cider {
+    order: 4;
   }
 
   .wine-row-v4 {
