@@ -2244,6 +2244,18 @@ body.modal-open {
   align-items: start;
 }
 
+.menu-row-secondary--accordion {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin: 6px 0 10px;
+  align-items: start;
+}
+
+.menu-row-secondary--accordion .menu-accordion-trigger--inline {
+  width: 100%;
+}
+
 .menu-accordion-trigger {
   width: 100%;
   display: flex;
@@ -2436,8 +2448,12 @@ body.modal-open {
   white-space: nowrap;
 }
 
-.happy-hours-v4 {
+.happy-hours-v4--panel {
   margin: 8px 0 56px;
+}
+
+.happy-hours-v4--row {
+  margin: 0;
 }
 
 .happy-hours-title {
@@ -2922,6 +2938,11 @@ body.modal-open {
     gap: 22px;
   }
 
+  .menu-row-secondary--accordion {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
   .wine-row-v4 {
     gap: 22px;
   }
@@ -3043,7 +3064,7 @@ body.modal-open {
     margin-bottom: 0;
   }
 
-  .happy-hours-v4 {
+  .happy-hours-v4--panel {
     margin-top: 18px;
   }
 
