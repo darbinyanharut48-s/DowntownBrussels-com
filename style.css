@@ -2653,6 +2653,32 @@ body.modal-open {
   justify-self: end;
 }
 
+/* Alcohol rows: aligned 3-column layout (Name | Bottle | 5cl Price) */
+.menu-v4-list--alcohols li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 120px max-content;
+  align-items: center;
+  column-gap: 12px;
+}
+
+.menu-v4-list--alcohols .item-meta {
+  margin-top: 0;
+  text-align: center;
+  justify-self: center;
+  width: 100%;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.menu-v4-list--alcohols .price {
+  margin-left: 0;
+  justify-self: end;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
 /* Cocktails Specialized */
 .cocktail-sub-title {
   font-family: var(--font-head);
