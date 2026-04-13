@@ -2453,11 +2453,16 @@ body.modal-open {
 }
 
 .happy-hours-v4--panel {
-  margin: 8px 0 56px;
+  margin: 0;
 }
 
 .happy-hours-v4--row {
   margin: 0;
+}
+
+.happy-hours-v4--panel .happy-hours-grid:not([hidden]) {
+  margin-top: 8px;
+  margin-bottom: 56px;
 }
 
 .happy-hours-title {
@@ -3085,6 +3090,10 @@ body.modal-open {
   }
 
   .happy-hours-v4--panel {
+    margin-top: 0;
+  }
+
+  .happy-hours-v4--panel .happy-hours-grid:not([hidden]) {
     margin-top: 18px;
   }
 
