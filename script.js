@@ -669,6 +669,11 @@ let bodyScrollLocks = 0;
 let activeFaqIndex = 0;
 let selectedMatchDate = '';
 let nextUpdateTimeout = null;
+const locationMapEmbedByLang = {
+  en: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d353.4505665363378!2d4.349797889180206!3d50.84766077609295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c53bbe38d92f%3A0x16e3ba0bfac7711a!2sDowntown%20Brussels!5e0!3m2!1sen!2sen!4v1776081560829!5m2!1sen!2sen',
+  fr: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d353.4505665363378!2d4.349797889180206!3d50.84766077609295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c53bbe38d92f%3A0x16e3ba0bfac7711a!2sDowntown%20Brussels!5e0!3m2!1sfr!2sfr!4v1776081560829!5m2!1sfr!2sfr',
+  nl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d353.4505665363378!2d4.349797889180206!3d50.84766077609295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c53bbe38d92f%3A0x16e3ba0bfac7711a!2sDowntown%20Brussels!5e0!3m2!1snl!2snl!4v1776081560829!5m2!1snl!2snl'
+};
 
 // =============================================
 // 4. LANGUAGE SWITCHING
@@ -684,6 +689,13 @@ function applyTranslations(lang) {
     if (t[key] !== undefined) el.setAttribute('placeholder', t[key]);
   });
   document.documentElement.lang = lang;
+}
+
+function updateLocationMapLanguage(lang) {
+  const iframe = document.getElementById('location-map-embed');
+  if (!iframe) return;
+  const src = locationMapEmbedByLang[lang] || locationMapEmbedByLang.en;
+  iframe.setAttribute('src', src);
 }
 
 function lockBodyScroll() {
@@ -703,6 +715,7 @@ function setLanguage(lang) {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
   applyTranslations(lang);
+  updateLocationMapLanguage(lang);
   renderFAQ();
   renderEvents();
   renderLiveGames();
@@ -1955,6 +1968,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // =============================================
 document.addEventListener('DOMContentLoaded', () => {
   applyTranslations('en');
+  updateLocationMapLanguage('en');
   normalizeVolumeRows(document);
   renderFAQ();
   initFAQ();
