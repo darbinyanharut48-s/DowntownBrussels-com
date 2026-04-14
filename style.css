@@ -2503,7 +2503,7 @@ body.modal-open {
   border-radius: 999px;
   border: 1px solid rgba(212, 175, 55, 0.35);
   color: #d7bc90;
-  font-size: 0.74rem;
+  font-size: 1rem;
   letter-spacing: 0.06em;
   text-transform: none;
   vertical-align: middle;
